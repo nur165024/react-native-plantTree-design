@@ -10,7 +10,7 @@ export const COLORS = {
   // colors
   black: "#1e1f20",
   white: "#ffffff",
-  lightGray: "#eff2f5",
+  lightGray: "#EEF2F5",
   gray: "#bec1d2",
 };
 
@@ -45,22 +45,22 @@ export const FONTS = {
   },
   h1: {
     fontWeight: "900",
-    fontSize: SIZES.largeTitle,
+    fontSize: SIZES.h1,
     lineHeight: 36,
   },
   h2: {
     fontWeight: "700",
-    fontSize: SIZES.largeTitle,
+    fontSize: SIZES.h2,
     lineHeight: 30,
   },
   h3: {
     fontWeight: "700",
-    fontSize: SIZES.largeTitle,
+    fontSize: SIZES.h3,
     lineHeight: 22,
   },
   h4: {
     fontWeight: "700",
-    fontSize: SIZES.largeTitle,
+    fontSize: SIZES.h4,
     lineHeight: 22,
   },
   body1: {
