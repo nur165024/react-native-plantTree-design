@@ -25,6 +25,16 @@ const TabBtn = ({ Icon, name, size, style }) => {
   );
 };
 
+const TabBtnCamera = ({ Icon, name, size }) => {
+  return (
+    <Text
+      style={{ backgroundColor: COLORS.primary, padding: 5, borderRadius: 50 }}
+    >
+      <Icon name={name} size={size} color={COLORS.white} />
+    </Text>
+  );
+};
+
 export default function Tabs() {
   return (
     <Tab.Navigator
@@ -32,6 +42,7 @@ export default function Tabs() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused }) => {
           const tintColor = focused ? COLORS.primary : COLORS.gray;
+          const cameraColor = focused ? COLORS.white : COLORS.gray;
 
           switch (route.name) {
             case "Home":
@@ -55,14 +66,7 @@ export default function Tabs() {
               );
 
             case "Camera":
-              return (
-                <TabBtn
-                  Icon={EvilIcons}
-                  name="camera"
-                  size={26}
-                  style={tintColor}
-                />
-              );
+              return <TabBtnCamera Icon={EvilIcons} name="camera" size={26} />;
 
             case "Search":
               return (
@@ -87,7 +91,11 @@ export default function Tabs() {
         },
       })}
     >
-      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen
+        options={{ headerShown: false }}
+        name="Home"
+        component={Home}
+      />
       <Tab.Screen name="Box" component={Home} />
       <Tab.Screen name="Camera" component={Home} />
       <Tab.Screen name="Search" component={Home} />
