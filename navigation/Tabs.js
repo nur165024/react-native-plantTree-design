@@ -28,7 +28,15 @@ const TabBtn = ({ Icon, name, size, style }) => {
 const TabBtnCamera = ({ Icon, name, size }) => {
   return (
     <Text
-      style={{ backgroundColor: COLORS.primary, padding: 5, borderRadius: 50 }}
+      style={{
+        backgroundColor: COLORS.primary,
+        width: 35,
+        height: 35,
+        lineHeight: 30,
+        textAlign: "center",
+        borderRadius: 50,
+        marginBottom: 5,
+      }}
     >
       <Icon name={name} size={size} color={COLORS.white} />
     </Text>
@@ -42,7 +50,6 @@ export default function Tabs() {
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused }) => {
           const tintColor = focused ? COLORS.primary : COLORS.gray;
-          const cameraColor = focused ? COLORS.white : COLORS.gray;
 
           switch (route.name) {
             case "Home":
@@ -89,10 +96,15 @@ export default function Tabs() {
               );
           }
         },
+        tabBarActiveTintColor: COLORS.primary,
+        headerStyle: { paddingTop: 15 },
       })}
     >
       <Tab.Screen
-        options={{ headerShown: false }}
+        barStyle={{ padding: 15 }}
+        options={{
+          headerShown: false,
+        }}
         name="Home"
         component={Home}
       />
