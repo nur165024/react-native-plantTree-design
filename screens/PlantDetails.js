@@ -263,14 +263,38 @@ export default function PlantDetails({ navigation }) {
 
         {/* boot part */}
         <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
-          <View style={{ flex: 1 }}>
-            <Text>Take Action</Text>
-            <AntDesign name="right" />
-          </View>
-          <View style={{ flex: 1.3 }}>
-            <Text>Almost 2 week of growing time</Text>
-            <AntDesign name="arrowdown" />
-          </View>
+          <TouchableOpacity
+            style={{
+              flex: 1,
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: COLORS.primary,
+              marginRight: 15,
+              borderTopRightRadius: 10,
+              borderBottomRightRadius: 10,
+              height: 80,
+            }}
+          >
+            <Text style={{ color: COLORS.white, ...FONTS.h4, width: "50%" }}>
+              Take Action
+            </Text>
+            <AntDesign name="right" color={COLORS.white} size={20} />
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{
+              flex: 1.3,
+              flexDirection: "row",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Text style={{ color: COLORS.gray, ...FONTS.body4, width: "70%" }}>
+              Almost 2 week of growing time
+            </Text>
+            <AntDesign name="arrowdown" color={COLORS.gray} size={20} />
+          </TouchableOpacity>
         </View>
       </View>
     </View>
