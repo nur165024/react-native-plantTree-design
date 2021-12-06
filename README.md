@@ -2,4 +2,4 @@
 
 ## ---------------------------
 
-<img src="./assets/images/projectImage.png" width="250" height="550" />
+<img src="./assets/images/projectImage.png" width="auto" height="550" />
